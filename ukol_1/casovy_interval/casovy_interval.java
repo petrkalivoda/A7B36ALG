@@ -37,7 +37,7 @@ public class casovy_interval {
         }
         
         Date d1 = new Date(NEJAKY_ROK, NEJAKY_MESIC, NEJAKY_DEN, casy[0][0], casy[0][1], casy[0][2]);
-        Date d2 = new Date(NEJAKY_ROK, NEJAKY_MESIC, NEJAKY_DEN, casy[1][0], casy[1][1], casy[1][2]);
+        Date d2 = new Date(NEJAKY_ROK, NEJAKY_MESIC, NEJAKY_DEN+(casy[1][0] > casy[0][0] ? 0 : 1), casy[1][0], casy[1][1], casy[1][2]);
         SimpleDateFormat sf = new SimpleDateFormat("HH:mm:ss");
         long diff = (d2.getTime() - d1.getTime()) / 1000;
 
