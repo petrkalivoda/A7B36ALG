@@ -1,7 +1,7 @@
 package ukol_4.bod_2;
 
 /**
- *
+ * "Pomocí této funkce zjistěte počet dokonalých čísel menších než 1 000 000 a tato čísla vypište."
  * @author Petr Kalivoda <petr.kalivoda@gmail.com>
  */
 public class dokonala_cisla {
