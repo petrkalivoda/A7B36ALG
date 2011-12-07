@@ -30,6 +30,15 @@ public class Matice {
         for (int i = 0; i < prohledavaneMatice.length; i++) { //nacteni prohledavanych matic
             prohledavaneMatice[i] = nactiMatici("Zadejte velikost "+(i+1)+". prohledavane matice (radek, sloupec):");
         }
+        System.out.println("-------------------------------------");
+        System.out.println("Hledana matice:");
+        System.out.println(hledanaMatice);
+        
+        for (int i = 0; i < prohledavaneMatice.length; i++) {
+            System.out.println((i+1)+". prohledavana matice:");
+            System.out.println(prohledavaneMatice[i]);
+        }
+
         System.out.println("--------------Vysledky---------------");
         String vysledek = "";
         int pocetIdentickych = 0, pocetPodmatic = 0, curPodmatice = 0;
@@ -231,7 +240,7 @@ public class Matice {
         int maxlen, remainder;
         String retstring = "";
 
-        for (int n = 0; n < retmatrix.length; n++) {
+        for (int n = 0; n < retmatrix[0].length; n++) {
             maxlen = 0;
             for (int m = 0; m < retmatrix.length; m++) { //zjisteni nejvetsiho, zapsani prvku
                 retmatrix[m][n] = ""+matice[m][n];
@@ -240,7 +249,7 @@ public class Matice {
                 }
             }
 
-            for (int m = 0; m < retmatrix[0].length; m++) { //dorovnani mezer
+            for (int m = 0; m < retmatrix.length; m++) { //dorovnani mezer
                 remainder = maxlen - retmatrix[m][n].length();
                 for (int c = 0; c < remainder; c++) {
                     retmatrix[m][n] = " "+retmatrix[m][n];
@@ -249,7 +258,7 @@ public class Matice {
         }
 
         for (int m = 0; m < retmatrix.length; m++) { //vytvoreni vysledneho stringu
-            for (int n = 0; n < retmatrix.length; n++) {
+            for (int n = 0; n < retmatrix[0].length; n++) {
                 retstring += retmatrix[m][n] + " ";
             }
             retstring += "\n"; //odradkovani
